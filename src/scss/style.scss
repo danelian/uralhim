@@ -4,19 +4,26 @@
 /***** GENERAL ELEMENTS *****/
 :root {
   // base
-  --content-width: 1160px;
-  --container-offset: 15px;
+  --content-width: 1240px;
+  --container-offset: 20px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --white-color: #ffffff;
-  --black-color: #131313;
-  --lightBlack-color: #292932;
-  --font-color: #131313;
+  --white-color: #fafafa;
+  --black-color: #151515;
+  --font-color: #151515;
 
-  --global-color: #E88320;
+  --global-color: #166dac;
+  --lightBlue-color: #8bb5d3;
+  --midBlue-color: #5186ac;
+  --darkBlue-color: #0a385a;
+
+  --lightGrey-color: #f1f1f1;
+  --midGrey-color: #999999;
+  --darkGrey-color: #737373;
+
   // --green-color: #8BD27C;
-  // --red-color: #FF3D00;
+  --red-color: #f36a6a;
 }
 
 /***** Mixins *****/
@@ -26,7 +33,7 @@
   padding: 0;
 }
 @mixin desktop {
-  @media screen and (max-width: 1190px) {
+  @media screen and (max-width: 1366px) {
     @content;
   }
 }
