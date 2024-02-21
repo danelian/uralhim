@@ -13,9 +13,9 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 19px 40px;
+	padding: 16px 40px;
 	font-size: 16px;
-	line-height: 1.2px;
+	line-height: 1.2;
 	font-weight: 600;
 	text-align: center;
 	color: var(--white-color);
@@ -25,6 +25,7 @@
 	background-color: var(--global-color);
 	transition: .3s ease;
 	svg {
+		margin-top: -2px;
 		margin-right: 8px;
 		width: 14px;
 		height: 14px;
@@ -34,8 +35,34 @@
 		color: var(--white-color);
 		background-color: var(--darkBlue-color);
 	}
-	&.disabled {
-		opacity: 0.4;
-		cursor: auto;
+	// написать потом стили для disable и других состояний
+}
+.button-second {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 40px;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 600;
+	text-align: center;
+	color: var(--global-color);
+	text-decoration: none;
+	border: 1px solid var(--global-color);
+	outline: none;
+	border-radius: 8px;
+	background-color: transparent;
+	transition: .3s ease;
+	&:hover {
+		text-decoration: none;
+		color: var(--darkBlue-color);
+		border-color: var(--darkBlue-color);
+	}
+	// написать потом стили для disable и других состояний
+}
+@include tablet {
+	.button-primary,
+	.buttom-second {
+		font-size: 14px;
 	}
 }

@@ -2,10 +2,14 @@
 <header class="header">
   <div class="container header__container">
     <a href="/" class="logo">
-      <img src="/img/logo.svg" alt="Logo">
+      <img src="/img/logo.svg" class="logo-desktop" alt="Logo">
+      <span>уралхимаппарат</span>
     </a>
-
-    <nav class="nav-menu">
+    <nav class="nav-menu" id="burger-menu">
+      <a href="/" class="logo">
+        <img src="/img/logo.svg" class="logo-desktop" alt="Logo">
+        <span>уралхимаппарат</span>
+      </a>
       <ul class="nav-list">
         <li><a href="index.html">Главная</a></li>
         <li><a href="products.html">Продукция</a></li>
@@ -19,6 +23,8 @@
         </svg>
         +7 922 195-15-44
       </a>
+      <button type="button" id="burger-close" class="button-second">Закрыть</button>
     </nav>
+    <button type="button" id="burger-open"><img src="/img/icons/burger.svg" alt="Button open burger-menu"></button>
   </div>
 </header>
