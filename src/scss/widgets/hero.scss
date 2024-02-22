@@ -22,6 +22,9 @@
     font-size: 42px;
     line-height: 1.09;
     text-transform: uppercase;
+    &-mobile {
+      display: none;
+    }
   }
   &__text {
     max-width: 540px;

@@ -35,7 +35,11 @@
 		color: var(--white-color);
 		background-color: var(--darkBlue-color);
 	}
-	// написать потом стили для disable и других состояний
+	&:disabled,
+	[disabled] {
+		color: var(--darkGrey-color);
+		background-color: var(--midGrey-color);
+	}
 }
 .button-second {
 	display: inline-flex;
@@ -58,7 +62,11 @@
 		color: var(--darkBlue-color);
 		border-color: var(--darkBlue-color);
 	}
-	// написать потом стили для disable и других состояний
+	&:disabled,
+	[disabled] {
+		color: var(--midGrey-color);
+		border-color: var(--midGrey-color);
+	}
 }
 @include tablet {
 	.button-primary,
