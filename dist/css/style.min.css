@@ -453,7 +453,7 @@ th {
 
 @media screen and (max-width: 1024px) {
   .button-primary,
-.buttom-second {
+.button-second {
     font-size: 14px;
   }
 }
@@ -687,14 +687,10 @@ th {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
   margin-top: 48px;
 }
-.hero__buttons .button-primary {
-  margin: 8px 20px 8px 0;
-}
 .hero__buttons .button-second {
-  margin: 8px 0;
+  margin-left: 20px;
 }
 .hero__image {
   position: absolute;
@@ -705,4 +701,84 @@ th {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    margin-top: 56px;
+    padding-bottom: 64px;
+  }
+  .hero__content {
+    width: 480px;
+  }
+  .hero__subtitle {
+    font-size: 18px;
+  }
+  .hero__title {
+    font-size: 28px;
+  }
+  .hero__text {
+    max-width: 330px;
+  }
+  .hero__text p {
+    font-size: 16px;
+  }
+  .hero__text p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .hero__buttons {
+    margin-top: 64px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    margin-top: 36px;
+    padding-bottom: 72px;
+  }
+  .hero__content {
+    width: 100%;
+  }
+  .hero__subtitle {
+    display: none;
+  }
+  .hero__title {
+    display: none;
+  }
+  .hero__title-mobile {
+    margin-top: 0;
+    margin-bottom: 44px;
+    font-family: "Radiotechnika", "Gilroy", sans-serif;
+    font-size: 24px;
+    line-height: 1.09;
+    text-transform: uppercase;
+  }
+  .hero__text {
+    max-width: 100%;
+  }
+  .hero__text p {
+    font-size: 16px;
+  }
+  .hero__text p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .hero__buttons {
+    flex-direction: column;
+    margin-top: 56px;
+  }
+  .hero__buttons .button-primary {
+    width: 100%;
+  }
+  .hero__buttons .button-second {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .hero__image {
+    position: relative;
+    margin-top: 52px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    aspect-ratio: 35/21;
+    border-radius: 16px;
+  }
 }

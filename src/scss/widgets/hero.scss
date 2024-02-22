@@ -40,13 +40,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
     margin-top: 48px;
-    .button-primary {
-      margin: 8px 20px 8px 0;
-    }
     .button-second {
-      margin: 8px 0;
+      margin-left: 20px;
     }
   }
   &__image {
@@ -58,5 +54,86 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+}
+
+@include tablet {
+  .hero {
+    margin-top: 56px;
+    padding-bottom: 64px;
+    &__content {
+      width: 480px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+    &__title {
+      font-size: 28px;
+    }
+    &__text {
+      max-width: 330px;
+      p {
+        font-size: 16px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &__buttons {
+      margin-top: 64px;
+    }
+  }
+}
+
+@include mobile {
+  .hero {
+    margin-top: 36px;
+    padding-bottom: 72px;
+    &__content {
+      width: 100%;
+    }
+    &__subtitle {
+      display: none;
+    }
+    &__title {
+      display: none;
+    }
+    &__title-mobile {
+      margin-top: 0;
+      margin-bottom: 44px;
+      font-family: 'Radiotechnika', 'Gilroy', sans-serif;
+      font-size: 24px;
+      line-height: 1.09;
+      text-transform: uppercase;
+    }
+    &__text {
+      max-width: 100%;
+      p {
+        font-size: 16px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &__buttons {
+      flex-direction: column;
+      margin-top: 56px;
+      .button-primary {
+        width: 100%;
+      }
+      .button-second {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+    &__image {
+      position: relative;
+      margin-top: 52px;
+      width: calc(100% - 40px);
+      margin-left: 20px;
+      aspect-ratio: 35 / 21;
+      border-radius: 16px;
+    }
   }
 }
