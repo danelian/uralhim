@@ -138,6 +138,9 @@ body {
   .default__container-right {
     width: 100%;
   }
+  body {
+    font-size: 16px;
+  }
 }
 .link-center {
   display: flex;
@@ -548,7 +551,7 @@ th {
   border: 1px solid var(--lightBlue-color);
   outline: none;
   border-radius: 8px;
-  background-color: transparent;
+  background-color: var(--darkBlue-color);
   transition: 0.3s ease;
 }
 .button-second-dark:hover {
@@ -1166,4 +1169,46 @@ th {
 }
 .companybl .row-buttons {
   margin-top: 64px;
+}
+
+@media screen and (max-width: 1024px) {
+  .companybl {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+  .companybl::before {
+    display: none;
+  }
+  .companybl .default__container-left {
+    margin-bottom: 64px;
+  }
+  .companybl__text p {
+    max-width: 520px;
+  }
+  .companybl__text p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .companybl .row-buttons {
+    margin-top: 56px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .companybl {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+  .companybl::before {
+    display: block;
+    top: auto;
+    bottom: 0;
+    background-size: 100% auto;
+    background-position-y: bottom;
+  }
+  .companybl__title {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .companybl .row-buttons {
+    margin-top: 56px;
+  }
 }

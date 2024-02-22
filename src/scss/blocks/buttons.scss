@@ -126,7 +126,7 @@
 	border: 1px solid var(--lightBlue-color);
 	outline: none;
 	border-radius: 8px;
-	background-color: transparent;
+	background-color: var(--darkBlue-color);
 	transition: .3s ease;
 	&:hover {
 		text-decoration: none;

@@ -42,3 +42,48 @@
     margin-top: 64px;
   }
 }
+
+@include tablet {
+  .companybl {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    &::before {
+      display: none;
+    }
+    .default__container-left {
+      margin-bottom: 64px;
+    }
+    &__text {
+      p {
+        max-width: 520px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    .row-buttons {
+      margin-top: 56px;
+    }
+  }
+}
+
+@include mobile {
+  .companybl {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    &::before {
+      display: block;
+      top: auto;
+      bottom: 0;
+      background-size: 100% auto;
+      background-position-y: bottom;
+    }
+    &__title {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .row-buttons {
+      margin-top: 56px;
+    }
+  }
+}
