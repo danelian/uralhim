@@ -458,148 +458,6 @@ th {
   }
 }
 /*-----title----*/
-.heading-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 48px;
-}
-.heading-row .link {
-  margin-top: 16px;
-}
-
-.section-text {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.section-text:not(:last-child) {
-  margin-bottom: 1rem;
-}
-.section-text p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.section-text p:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.default-wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  padding: 30px 20px;
-  border-radius: var(--border-radius);
-  background: var(--lightGrey-color);
-}
-.default-wrapper .quantity input {
-  background: var(--white-color);
-}
-.default-wrapper .select2-selection__rendered,
-.default-wrapper .select2-container .select2-selection--single,
-.default-wrapper .select2-container .select2-selection--single .select2-selection__rendered {
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.default-wrapper-dark {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  padding: 30px 20px;
-  border-radius: var(--border-radius);
-  background: radial-gradient(133.33% 133.33% at 50% 50%, #515158 0%, rgba(81, 81, 88, 0) 100%), #292932;
-}
-.default-wrapper-dark .link:hover {
-  color: var(--lightGrey-color);
-}
-.default-wrapper-dark .link:hover::before {
-  background-color: var(--lightGrey-color);
-}
-.default-wrapper-dark .link-input:hover {
-  color: var(--lightGrey-color);
-  border-color: var(--lightGrey-color);
-}
-.default-wrapper-dark .title-1, .default-wrapper-dark .title-2, .default-wrapper-dark .title-3, .default-wrapper-dark .title-4 {
-  color: var(--lightGrey-color);
-}
-
-.title-1 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.title-2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.title-3 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.title-4 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-
-@media screen and (max-width: 1024px) {
-  .heading-row {
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-  .section-text {
-    font-size: 16px;
-  }
-  .section-text:not(:last-child) {
-    margin-bottom: 0.7rem;
-  }
-  .section-text p:not(:last-child) {
-    margin-bottom: 0.7rem;
-  }
-  .title-1 {
-    font-size: 32px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .heading-row {
-    margin-bottom: 24px;
-  }
-  .default-wrapper,
-.default-wrapper-dark {
-    padding: 24px 10px;
-  }
-  .title-1 {
-    font-size: 24px;
-  }
-  .title-1,
-.title-2,
-.title-3,
-.title-4 {
-    text-align: left !important;
-  }
-}
 /***** COMPONENTS GLOBAL *****/
 /*----header-----*/
 .header {
@@ -786,3 +644,65 @@ th {
   }
 }
 /***** SECTIONS GLOBAL (Widgets) *****/
+.hero {
+  margin-top: 44px;
+  padding-bottom: 88px;
+  position: relative;
+}
+.hero__content {
+  width: 700px;
+}
+.hero__subtitle {
+  margin-top: 0;
+  margin-bottom: 56px;
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--global-color);
+}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-family: "Radiotechnika", "Gilroy", sans-serif;
+  font-size: 42px;
+  line-height: 1.09;
+  text-transform: uppercase;
+}
+.hero__text {
+  max-width: 540px;
+}
+.hero__text p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.32;
+}
+.hero__text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+.hero__buttons .button-primary {
+  margin: 8px 20px 8px 0;
+}
+.hero__buttons .button-second {
+  margin: 8px 0;
+}
+.hero__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

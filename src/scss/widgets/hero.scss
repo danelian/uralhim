@@ -1,0 +1,62 @@
+.hero {
+  margin-top: 44px;
+  padding-bottom: 88px;
+  position: relative;
+  &__content {
+    width: 700px;
+  }
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 56px;
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--global-color);
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-family: 'Radiotechnika', 'Gilroy', sans-serif;
+    font-size: 42px;
+    line-height: 1.09;
+    text-transform: uppercase;
+  }
+  &__text {
+    max-width: 540px;
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.32;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    .button-primary {
+      margin: 8px 20px 8px 0;
+    }
+    .button-second {
+      margin: 8px 0;
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
