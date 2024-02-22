@@ -21,6 +21,20 @@ body {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
+.default {
+	&__container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
+		&-left {
+			width: calc(32.26% - 20px);
+		}
+		&-right {
+			width: calc(67.74% - 20px);
+		}
+	}
+}
 .link-center {
 	display: flex;
 	align-items: center;

@@ -115,6 +115,19 @@ body {
   max-width: var(--container-width);
 }
 
+.default__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.default__container-left {
+  width: calc(32.26% - 20px);
+}
+.default__container-right {
+  width: calc(67.74% - 20px);
+}
+
 .link-center {
   display: flex;
   align-items: center;
@@ -399,11 +412,28 @@ th {
   background: none;
 }
 
+.row-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.row-buttons .button-primary,
+.row-buttons .button-second {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.row-buttons .button-primary:not(:last-child),
+.row-buttons .button-second:not(:last-child) {
+  margin-right: 20px;
+}
+
 .button-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 40px;
+  padding: 17px 40px 15px;
   font-size: 16px;
   line-height: 1.2;
   font-weight: 600;
@@ -437,7 +467,7 @@ th {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 40px;
+  padding: 17px 40px 15px;
   font-size: 16px;
   line-height: 1.2;
   font-weight: 600;
@@ -468,6 +498,19 @@ th {
   }
 }
 /*-----title----*/
+.default-title {
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--global-color);
+}
+.default-title h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /***** COMPONENTS GLOBAL *****/
 /*----header-----*/
 .header {
@@ -913,4 +956,43 @@ th {
     max-width: 180px;
     font-size: 14px;
   }
+}
+.productsbl {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.productsbl__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 76px 20px;
+  width: 100%;
+}
+.productsbl .row-buttons {
+  margin-top: 76px;
+}
+
+.pcard {
+  display: flex;
+  flex-direction: column;
+}
+.pcard-img {
+  width: 100%;
+  aspect-ratio: 40/25;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--global-color);
+  margin-bottom: 28px;
+}
+.pcard-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--black-color);
+  transition: color 0.3s ease;
+}
+.pcard:hover .pcard-title {
+  color: var(--global-color);
 }

@@ -1,0 +1,41 @@
+.productsbl {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 76px 20px;
+    width: 100%;
+  }
+  .row-buttons {
+    margin-top: 76px;
+  }
+}
+
+.pcard {
+  display: flex;
+  flex-direction: column;
+  &-img {
+    width: 100%;
+    aspect-ratio: 40 / 25;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid var(--global-color);
+    margin-bottom: 28px;
+  }
+  &-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--black-color);
+    transition: color .3s ease;
+  }
+  &:hover {
+    .pcard-title {
+      color: var(--global-color);
+    }
+  }
+}
