@@ -90,3 +90,21 @@
 		font-size: 14px;
 	}
 }
+@include mobile {
+	.row-buttons {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		width: 100%;
+		.button-primary,
+		.button-second {
+			margin: 0;
+			width: 100%;
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 28px;
+			}
+		}
+	}
+}

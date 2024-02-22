@@ -39,3 +39,47 @@
     }
   }
 }
+
+@include tablet {
+  .productsbl {
+    .default__container-left {
+      margin-bottom: 64px;
+    }
+    &__cards {
+      gap: 64px 20px;
+    }
+    .row-buttons {
+      margin-top: 56px;
+    }
+  }
+  
+  .pcard {
+    &-img {
+      aspect-ratio: 35 / 22;
+      margin-bottom: 24px;
+    }
+    &-title {
+      font-size: 16px;
+    }
+  }
+}
+
+@include mobile {
+  .productsbl {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      .pcard:nth-child(n+4) {
+        display: none;
+      }
+    }
+  }
+  
+  .pcard {
+    &-img {
+      aspect-ratio: 35 / 22;
+    }
+    &-title {
+      font-size: 14px;
+    }
+  }
+}
