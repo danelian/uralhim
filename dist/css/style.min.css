@@ -115,6 +115,10 @@ body {
   max-width: var(--container-width);
 }
 
+section {
+  margin-bottom: 120px;
+}
+
 .default__container {
   display: flex;
   align-items: flex-start;
@@ -123,6 +127,7 @@ body {
 }
 .default__container-left {
   width: calc(32.26% - 20px);
+  margin-bottom: 64px;
 }
 .default__container-right {
   width: calc(67.74% - 20px);
@@ -432,6 +437,7 @@ th {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 76px;
 }
 .row-buttons .button-primary,
 .row-buttons .button-second,
@@ -566,6 +572,9 @@ th {
 }
 
 @media screen and (max-width: 1024px) {
+  .row-buttons {
+    margin-top: 56px;
+  }
   .button-primary,
 .button-second,
 .button-primary-dark,
@@ -575,11 +584,7 @@ th {
 }
 @media screen and (max-width: 576px) {
   .row-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
+    margin-top: 68px;
   }
   .row-buttons .button-primary,
 .row-buttons .button-second,
@@ -599,17 +604,50 @@ th {
 /*-----title----*/
 .default-title {
   display: inline-flex;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 20px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
   color: var(--global-color);
 }
-.default-title h2 {
+
+.section-title {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: "Radiotechnika", "Gilroy", sans-serif;
+  font-size: 36px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--font-color);
+}
+.section-title:not(:last-child) {
+  margin-bottom: 48px;
 }
 
+@media screen and (max-width: 1024px) {
+  .default-title {
+    font-size: 18px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .section-title:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .default-title {
+    font-size: 16px;
+  }
+  .section-title {
+    font-size: 22px;
+  }
+  .section-title:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
 /***** COMPONENTS GLOBAL *****/
 /*----header-----*/
 .header {
@@ -795,10 +833,55 @@ th {
     font-size: 20px;
   }
 }
+.accordion {
+  display: grid;
+  row-gap: 24px;
+}
+.accordion-item {
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--global-color);
+}
+.accordion-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-header .section-title {
+  transition: color 0.3s ease;
+}
+.accordion-header:hover .section-title {
+  color: var(--global-color);
+}
+.accordion-content {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.25s ease;
+}
+.accordion-content p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  max-width: 580px;
+}
+.accordion-content p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .accordion-item {
+    padding-bottom: 20px;
+  }
+  .accordion-content p {
+    margin-top: 16px;
+  }
+  .accordion-content p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
 /***** SECTIONS GLOBAL (Widgets) *****/
 .hero {
   margin-top: 44px;
   padding-bottom: 88px;
+  margin-bottom: 0 !important;
   position: relative;
 }
 .hero__content {
@@ -838,14 +921,8 @@ th {
 .hero__text p:not(:last-child) {
   margin-bottom: 20px;
 }
-.hero__buttons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.hero .row-buttons {
   margin-top: 48px;
-}
-.hero__buttons .button-second {
-  margin-left: 20px;
 }
 .hero__image {
   position: absolute;
@@ -881,8 +958,8 @@ th {
   .hero__text p:not(:last-child) {
     margin-bottom: 16px;
   }
-  .hero__buttons {
-    margin-top: 64px;
+  .hero .row-buttons {
+    margin-top: 56px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -902,6 +979,7 @@ th {
   .hero__title-mobile {
     margin-top: 0;
     margin-bottom: 44px;
+    display: block;
     font-family: "Radiotechnika", "Gilroy", sans-serif;
     font-size: 24px;
     line-height: 1.09;
@@ -916,17 +994,8 @@ th {
   .hero__text p:not(:last-child) {
     margin-bottom: 16px;
   }
-  .hero__buttons {
-    flex-direction: column;
-    margin-top: 56px;
-  }
-  .hero__buttons .button-primary {
-    width: 100%;
-  }
-  .hero__buttons .button-second {
-    margin-top: 20px;
-    margin-left: 0;
-    width: 100%;
+  .hero .row-buttons {
+    margin-top: 64px;
   }
   .hero__image {
     position: relative;
@@ -1056,18 +1125,11 @@ th {
     font-size: 14px;
   }
 }
-.productsbl {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
 .productsbl__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 76px 20px;
   width: 100%;
-}
-.productsbl .row-buttons {
-  margin-top: 76px;
 }
 
 .pcard {
@@ -1097,14 +1159,8 @@ th {
 }
 
 @media screen and (max-width: 1024px) {
-  .productsbl .default__container-left {
-    margin-bottom: 64px;
-  }
   .productsbl__cards {
     gap: 64px 20px;
-  }
-  .productsbl .row-buttons {
-    margin-top: 56px;
   }
   .pcard-img {
     aspect-ratio: 35/22;
@@ -1178,9 +1234,6 @@ th {
   }
   .companybl::before {
     display: none;
-  }
-  .companybl .default__container-left {
-    margin-bottom: 64px;
   }
   .companybl__text p {
     max-width: 520px;

@@ -21,6 +21,9 @@ body {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
+section {
+	margin-bottom: 120px;
+}
 .default {
 	&__container {
 		display: flex;
@@ -29,6 +32,7 @@ body {
 		width: 100%;
 		&-left {
 			width: calc(32.26% - 20px);
+			margin-bottom: 64px;
 		}
 		&-right {
 			width: calc(67.74% - 20px);

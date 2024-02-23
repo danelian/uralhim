@@ -1,14 +1,11 @@
 .productsbl {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  // padding-top: 120px;
+  // padding-bottom: 120px;
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 76px 20px;
     width: 100%;
-  }
-  .row-buttons {
-    margin-top: 76px;
   }
 }
 
@@ -42,14 +39,8 @@
 
 @include tablet {
   .productsbl {
-    .default__container-left {
-      margin-bottom: 64px;
-    }
     &__cards {
       gap: 64px 20px;
-    }
-    .row-buttons {
-      margin-top: 56px;
     }
   }
   

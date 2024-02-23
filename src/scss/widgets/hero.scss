@@ -1,6 +1,7 @@
 .hero {
   margin-top: 44px;
   padding-bottom: 88px;
+  margin-bottom: 0 !important;
   position: relative;
   &__content {
     width: 700px;
@@ -39,14 +40,8 @@
       }
     }
   }
-  &__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 48px;
-    .button-second {
-      margin-left: 20px;
-    }
+  .row-buttons {
+   margin-top: 48px;
   }
   &__image {
     position: absolute;
@@ -82,8 +77,8 @@
         }
       }
     }
-    &__buttons {
-      margin-top: 64px;
+    .row-buttons {
+      margin-top: 56px;
     }
   }
 }
@@ -104,6 +99,7 @@
     &__title-mobile {
       margin-top: 0;
       margin-bottom: 44px;
+      display: block;
       font-family: 'Radiotechnika', 'Gilroy', sans-serif;
       font-size: 24px;
       line-height: 1.09;
@@ -118,17 +114,8 @@
         }
       }
     }
-    &__buttons {
-      flex-direction: column;
-      margin-top: 56px;
-      .button-primary {
-        width: 100%;
-      }
-      .button-second {
-        margin-top: 20px;
-        margin-left: 0;
-        width: 100%;
-      }
+    .row-buttons {
+      margin-top: 64px;
     }
     &__image {
       position: relative;
