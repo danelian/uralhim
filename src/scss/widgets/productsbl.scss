@@ -13,12 +13,17 @@
   display: flex;
   flex-direction: column;
   &-img {
+    padding: 8px;
     width: 100%;
     aspect-ratio: 40 / 25;
     border-radius: 12px;
-    object-fit: cover;
     border: 1px solid var(--global-color);
     margin-bottom: 28px;
+    transition: background-color .3s ease;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   &-title {
     margin-top: 0;
@@ -31,6 +36,9 @@
     transition: color .3s ease;
   }
   &:hover {
+    .pcard-img {
+      background-color: var(--darkBlue-color);
+    }
     .pcard-title {
       color: var(--global-color);
     }

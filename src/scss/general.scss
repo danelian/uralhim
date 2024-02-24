@@ -21,6 +21,10 @@ body {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
+.wpcf7-form p {
+	margin: 0 !important;
+	// width: 100%;
+}
 section {
 	margin-bottom: 120px;
 }

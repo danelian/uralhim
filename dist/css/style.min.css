@@ -115,6 +115,10 @@ body {
   max-width: var(--container-width);
 }
 
+.wpcf7-form p {
+  margin: 0 !important;
+}
+
 section {
   margin-bottom: 120px;
 }
@@ -877,6 +881,148 @@ th {
     margin-bottom: 16px;
   }
 }
+/*-----form-----*/
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-label {
+  margin-top: 0;
+  margin-bottom: 16px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--global-color);
+}
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.form-group a {
+  font-size: 18px;
+  text-decoration: underline;
+  color: var(--global-color);
+}
+.form-group a:hover {
+  text-decoration: none;
+}
+.form-checkbox {
+  margin-top: 48px;
+}
+.form-input {
+  width: 100%;
+  height: 60px;
+  padding: 23px 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--font-color);
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  background: var(--lightGrey-color);
+  transition: 0.3s ease;
+}
+.form-input::placeholder {
+  color: var(--midGrey-color);
+}
+.form-input:hover {
+  border-color: var(--global-color);
+}
+.form-input:focus {
+  border-color: var(--global-color);
+  background-color: var(--white-color);
+}
+.form-input:focus::placeholder {
+  opacity: 0;
+}
+
+.wpcf7-list-item label {
+  display: block;
+  margin: 0;
+  max-width: 310px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  /* Checked */
+}
+.wpcf7-list-item label input[type=checkbox] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.wpcf7-list-item label span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 46px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.32;
+  color: var(--font-color);
+}
+.wpcf7-list-item label span a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.32;
+  color: var(--global-color);
+  text-decoration: underline;
+}
+.wpcf7-list-item label span a:hover {
+  text-decoration: none;
+}
+.wpcf7-list-item label span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: var(--lightGrey-color);
+  transition: all 0.3s ease;
+}
+.wpcf7-list-item label:hover span:before {
+  border-color: var(--global-color);
+}
+.wpcf7-list-item label span:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/check-grey.svg");
+}
+.wpcf7-list-item label input[type=checkbox]:checked + span:before {
+  background-color: var(--global-color);
+}
+.wpcf7-list-item label input[type=checkbox]:checked + span:after {
+  background-image: url("../img/icons/check-white.svg");
+}
+
+/* Checkbox */
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+
 /***** SECTIONS GLOBAL (Widgets) *****/
 .hero {
   margin-top: 44px;
@@ -1137,12 +1283,17 @@ th {
   flex-direction: column;
 }
 .pcard-img {
+  padding: 8px;
   width: 100%;
   aspect-ratio: 40/25;
   border-radius: 12px;
-  object-fit: cover;
   border: 1px solid var(--global-color);
   margin-bottom: 28px;
+  transition: background-color 0.3s ease;
+}
+.pcard-img img {
+  width: 100%;
+  height: 100%;
 }
 .pcard-title {
   margin-top: 0;
@@ -1153,6 +1304,9 @@ th {
   text-transform: uppercase;
   color: var(--black-color);
   transition: color 0.3s ease;
+}
+.pcard:hover .pcard-img {
+  background-color: var(--darkBlue-color);
 }
 .pcard:hover .pcard-title {
   color: var(--global-color);
@@ -1360,4 +1514,48 @@ th {
   .accreditbl .default__container-right p:nth-child(2), .accreditbl .default__container-right p:nth-child(4) {
     max-width: 100%;
   }
+}
+.ctabl__form .section-title {
+  max-width: 520px;
+}
+.ctabl__form > p {
+  max-width: 510px;
+}
+.ctabl__form .wpcf7 {
+  margin-top: 80px;
+}
+.ctabl .default__container {
+  position: relative;
+}
+.ctabl__socials {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+}
+.ctabl__socials h3 {
+  margin-top: 0;
+  margin-bottom: 48px;
+  max-width: 280px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.32;
+  color: var(--font-color);
+}
+
+.socials {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.socials .social {
+  width: 32px;
+  height: 32px;
+  color: var(--global-color);
+}
+.socials .social:hover {
+  color: var(--darkBlue-color);
+}
+.socials .social:not(:last-child) {
+  margin-right: 32px;
 }
