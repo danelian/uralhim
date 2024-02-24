@@ -117,6 +117,7 @@ body {
 
 .wpcf7-form p {
   margin: 0 !important;
+  width: 100%;
 }
 
 section {
@@ -1023,6 +1024,45 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
+@media screen and (max-width: 576px) {
+  .form-label {
+    margin-bottom: 12px;
+  }
+  .form-group {
+    margin-bottom: 36px;
+  }
+  .form-group a {
+    font-size: 16px;
+  }
+  .form-checkbox {
+    margin-top: 40px;
+  }
+  .form-input {
+    height: 56px;
+    padding: 21px 28px;
+  }
+  .wpcf7-list-item label {
+    max-width: 310px;
+  }
+  .wpcf7-list-item label span {
+    padding-left: 42px;
+    font-size: 12px;
+  }
+  .wpcf7-list-item label span a {
+    font-size: 12px;
+  }
+  .wpcf7-list-item label span:before {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+  }
+  .wpcf7-list-item label span:after {
+    left: 4px;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+  }
+}
 /***** SECTIONS GLOBAL (Widgets) *****/
 .hero {
   margin-top: 44px;
@@ -1558,4 +1598,33 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .socials .social:not(:last-child) {
   margin-right: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .ctabl__form > p {
+    max-width: 380px;
+  }
+  .ctabl__form .wpcf7 {
+    margin-top: 60px;
+  }
+  .ctabl .default__container {
+    max-width: 610px;
+  }
+  .ctabl__socials {
+    margin-top: 60px;
+    position: relative;
+    left: auto;
+    bottom: auto;
+  }
+  .ctabl__socials h3 {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+  .socials .social {
+    width: 28px;
+    height: 28px;
+  }
+  .socials .social:not(:last-child) {
+    margin-right: 28px;
+  }
 }

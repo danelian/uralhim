@@ -224,3 +224,47 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
 	display: none;
 }
+
+@include mobile {
+	.form {
+		&-label {
+			margin-bottom: 12px;
+		}
+		&-group {
+			margin-bottom: 36px;
+			a {
+				font-size: 16px;
+			}
+		}
+		&-checkbox {
+			margin-top: 40px;
+		}
+		&-input {
+			height: 56px;
+			padding: 21px 28px;
+		}
+	}
+	.wpcf7-list-item {
+		label {
+			max-width: 310px;
+			span {
+				padding-left: 42px;
+				font-size: 12px;
+				a {
+					font-size: 12px;
+				}
+			}
+			span:before {
+				width: 24px;
+				height: 24px;
+				border-radius: 4px;
+			}
+			span:after {
+				left: 4px;
+				top: 2px;
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+}
