@@ -103,6 +103,7 @@
     margin-bottom: 72px;
     .footer__title {
       max-width: 180px;
+      margin-bottom: 24px;
     }
     .wpcf7 {
       position: relative;
@@ -150,6 +151,84 @@
           opacity: 0;
         }
       }
+    }
+  }
+}
+
+@include tablet {
+  .footer {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    &__container {
+      justify-content: flex-start;
+      flex-direction: column;
+      &-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 76px;
+      }
+      &-right {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+    &__logo {
+      width: 230px;
+    }
+    &__title {
+      margin-bottom: 12px;
+    }
+    &__group {
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+      p {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .footer {
+    &__container {
+      justify-content: flex-start;
+      flex-direction: column;
+      &-left {
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      &-right {
+        flex-wrap: wrap;
+        .footer__col {
+          &:nth-child(1) {
+            width: 120px;
+          }
+          &:nth-child(2) {
+            width: 50%;
+          }
+          &:nth-child(3) {
+            margin-top: 68px;
+            width: 100%;
+          }
+        }
+      }
+      .socials {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        justify-content: center;
+        margin-bottom: 72px;
+      }
+    }
+    &__link {
+      display: block;
+      text-align: center;
+    }
+    &__copy {
+      text-align: center;
     }
   }
 }
