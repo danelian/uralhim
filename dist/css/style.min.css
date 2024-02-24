@@ -1948,3 +1948,57 @@ input[type=number]::-webkit-inner-spin-button {
     height: 240px;
   }
 }
+.default-page {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.default-page h1 {
+  max-width: 80%;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.default-page h1:not(:last-child) {
+  margin-bottom: 52px;
+}
+.default-page p {
+  max-width: 75%;
+}
+.default-page p:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .default-page {
+    padding-top: 56px;
+    padding-bottom: 100px;
+  }
+  .default-page h1 {
+    max-width: 100%;
+  }
+  .default-page h1:not(:last-child) {
+    margin-bottom: 52px;
+  }
+  .default-page p {
+    max-width: 80%;
+  }
+  .default-page p:not(:last-child) {
+    margin-bottom: 44px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .default-page {
+    padding-top: 36px;
+  }
+  .default-page h1 {
+    font-size: 24px;
+  }
+  .default-page h1:not(:last-child) {
+    margin-bottom: 44px;
+  }
+  .default-page p {
+    max-width: 100%;
+  }
+  .default-page p:not(:last-child) {
+    margin-bottom: 36px;
+  }
+}
