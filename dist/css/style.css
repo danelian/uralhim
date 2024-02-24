@@ -457,6 +457,9 @@ th {
 .row-buttons .button-second-dark:not(:last-child) {
   margin-right: 20px;
 }
+.row-buttons p {
+  width: auto !important;
+}
 
 .button-primary {
   display: inline-flex;
@@ -590,6 +593,9 @@ th {
 @media screen and (max-width: 576px) {
   .row-buttons {
     margin-top: 68px;
+  }
+  .row-buttons p {
+    width: 100% !important;
   }
   .row-buttons .button-primary,
 .row-buttons .button-second,
@@ -1627,4 +1633,55 @@ input[type=number]::-webkit-inner-spin-button {
   .socials .social:not(:last-child) {
     margin-right: 28px;
   }
+}
+.contactsbl .default-title {
+  margin-bottom: 56px;
+}
+.contactsbl__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contactsbl__list-item {
+  width: 100%;
+}
+.contactsbl__list-item:nth-child(1) a {
+  text-decoration: underline;
+}
+.contactsbl__list-item:nth-child(1) a:hover {
+  text-decoration: none;
+}
+.contactsbl__list-item:not(:last-child) {
+  margin-bottom: 26px;
+  padding-bottom: 26px;
+  border-bottom: 2px solid var(--global-color);
+}
+.contactsbl__list-item h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-family: "Radiotechnika", "Gilroy", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.32;
+  text-transform: uppercase;
+  color: var(--font-color);
+}
+.contactsbl__list-item a, .contactsbl__list-item p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--global-color);
+}
+
+.map {
+  width: 100%;
+  height: 510px;
+  border-radius: 15px;
+}
+
+.ymaps-2-1-79-map,
+.ymaps-2-1-79-inner-panes {
+  border-radius: 15px;
 }
