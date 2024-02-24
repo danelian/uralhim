@@ -36,7 +36,6 @@ section {
 		width: 100%;
 		&-left {
 			width: calc(32.26% - 20px);
-			margin-bottom: 64px;
 		}
 		&-right {
 			width: calc(67.74% - 20px);
@@ -49,6 +48,7 @@ section {
 			flex-wrap: wrap;
 			&-left {
 				width: 100%;
+				margin-bottom: 64px;
 			}
 			&-right {
 				width: 100%;
