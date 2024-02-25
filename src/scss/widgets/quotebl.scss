@@ -1,0 +1,33 @@
+.quotebl {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  background-color: var(--darkBlue-color);
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.32;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+}
+
+@include tablet {
+  .quotebl {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@include mobile {
+  .quotebl {
+    h2 {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+  }
+}

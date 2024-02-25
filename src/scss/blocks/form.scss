@@ -113,8 +113,10 @@
 				line-height: 1.32;
 				color: var(--global-color);
 				text-decoration: underline;
+				transition: color .3s ease;
 				&:hover {
 					text-decoration: none;
+					color: var(--darkBlue-color);
 				}
 			}
 		}

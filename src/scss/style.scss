@@ -66,11 +66,11 @@
 // @import "blocks/article";
 // @import "blocks/sliders";
 @import "blocks/form";
+@import "blocks/cards";
 
 /***** SECTIONS GLOBAL (Widgets) *****/
 @import "widgets/hero";
 @import "widgets/benefits";
-@import "widgets/productsbl";
 @import "widgets/companybl";
 @import "widgets/default-sections";
 @import "widgets/upobl";
@@ -80,5 +80,6 @@
 @import "widgets/default-page";
 @import "widgets/error404";
 @import "widgets/gallerybl";
+@import "widgets/quotebl.scss";
 
 @import "blocks/pages";

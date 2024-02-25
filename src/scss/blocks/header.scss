@@ -11,7 +11,12 @@
   transition: position 10s ease-in, background-color 0.3s ease-in;
   &.active {
     position: fixed;
-    background-color: var(--white-color);
+    padding: 12px 0;
+    background-color: rgba(250, 250, 250, .3);
+    // filter: blur(30px);
+    // -webkit-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
   }
   .logo {
     flex-shrink: 0;
