@@ -764,7 +764,7 @@
 }
 
 .fancybox-share__button--tw {
-	background: #ed1d24;
+	background: #166dac;
 }
 
 .fancybox-share__button--tw:hover {
@@ -966,7 +966,7 @@
 	height: 1rem;
 }
 .fancybox-navigation .fancybox-button:hover:after {
-	border-color: #ed1d24;
+	border-color: #166dac;
 }
 
 .fancybox-navigation .fancybox-button:hover {
