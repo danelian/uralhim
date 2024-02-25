@@ -1815,6 +1815,44 @@ input[type=number]::-webkit-inner-spin-button {
 .accreditbl__logos-item img:hover {
   filter: saturate(100%);
 }
+.accreditbl__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.accreditbl__card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: var(--global-color);
+}
+.accreditbl__card img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+.accreditbl__card:nth-child(1) p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--white-color);
+}
+.accreditbl__card:nth-child(2) {
+  background-color: var(--darkBlue-color);
+}
+.accreditbl__card:nth-child(2) p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.32;
+  color: var(--white-color);
+}
 .accreditbl .default__container-right p:nth-child(2) {
   max-width: 390px;
 }
@@ -1849,6 +1887,15 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .accreditbl__logos-item img {
     max-height: 60px;
+  }
+  .accreditbl__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .accreditbl__card {
+    padding: 28px;
+  }
+  .accreditbl__card:nth-child(1) p {
+    font-size: 16px;
   }
   .accreditbl .default__container-right p:nth-child(2), .accreditbl .default__container-right p:nth-child(4) {
     max-width: 100%;
@@ -2159,8 +2206,32 @@ input[type=number]::-webkit-inner-spin-button {
     max-height: 40%;
   }
 }
+.gallerybl__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.gallerybl__items a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .gallerybl__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .page-template-about .default-section2 .section-title {
   font-size: 35px;
+}
+.page-template-about .accreditbl .default__container-right > p:last-child {
+  margin-top: 52px;
+  margin-bottom: 0;
+  max-width: 350px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2174,5 +2245,8 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .page-template-about .default-section2 .section-title span {
     display: none;
+  }
+  .page-template-about .accreditbl .default__container-right > p:last-child {
+    margin-top: 40px;
   }
 }

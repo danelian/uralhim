@@ -4,6 +4,12 @@
       font-size: 35px;
     }
   }
+  .accreditbl .default__container-right>p:last-child {
+    margin-top: 52px;
+    margin-bottom: 0;
+    max-width: 350px;
+    font-size: 16px;
+  }
 }
 
 @include tablet {
@@ -25,6 +31,9 @@
           display: none;
         }
       }
+    }
+    .accreditbl .default__container-right>p:last-child {
+      margin-top: 40px;
     }
   }
 }

@@ -1,0 +1,22 @@
+.gallerybl {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
+
+@include mobile {
+  .gallerybl {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
