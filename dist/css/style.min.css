@@ -1686,6 +1686,78 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 56px;
   }
 }
+.default-section2 {
+  padding-top: 64px;
+}
+.default-section2__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.default-section2__container-left {
+  width: calc(50% - 12px);
+}
+.default-section2__container-left .default-title {
+  margin-bottom: 56px;
+}
+.default-section2__container-left .section-title {
+  word-wrap: break-word;
+}
+.default-section2__container-left .section-title:not(:last-child) {
+  margin-bottom: 32px;
+}
+.default-section2__container-left p {
+  max-width: 580px;
+}
+.default-section2__container-left .row-buttons {
+  margin-top: 46px;
+}
+.default-section2__container-right {
+  width: calc(50% - 12px);
+}
+.default-section2__container-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .default-section2 {
+    padding-top: 44px;
+  }
+  .default-section2__container-left {
+    width: calc(60% - 12px);
+  }
+  .default-section2__container-right {
+    width: calc(40% - 12px);
+  }
+}
+@media screen and (max-width: 765px) {
+  .default-section2 {
+    padding-top: 44px;
+  }
+  .default-section2__container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .default-section2__container-left {
+    width: 100%;
+  }
+  .default-section2__container-left .row-buttons .button-primary:not(:last-child),
+.default-section2__container-left .row-buttons .button-second:not(:last-child),
+.default-section2__container-left .row-buttons .button-primary-dark:not(:last-child),
+.default-section2__container-left .row-buttons .button-second-dark:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .default-section2__container-right {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .default-section2__container-right img {
+    aspect-ratio: 35/21;
+  }
+}
 .upobl__content {
   padding-top: 64px;
   padding-bottom: 64px;
@@ -2085,5 +2157,22 @@ input[type=number]::-webkit-inner-spin-button {
   .errorbl__image {
     height: 360px;
     max-height: 40%;
+  }
+}
+.page-template-about .default-section2 .section-title {
+  font-size: 35px;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-template-about .default-section2 .section-title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .page-template-about .default-section2 .section-title {
+    font-size: 24px;
+  }
+  .page-template-about .default-section2 .section-title span {
+    display: none;
   }
 }
