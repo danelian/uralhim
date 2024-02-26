@@ -1831,6 +1831,27 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 80px;
 }
 
+.dsection8__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.dsection8__col {
+  width: calc(50% - 10px);
+}
+.dsection8__col > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.dsection8__infocards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  height: 100%;
+}
+
 .infocard {
   padding: 28px 16px 28px 28px;
   border-radius: 16px;
@@ -1951,6 +1972,19 @@ input[type=number]::-webkit-inner-spin-button {
   .dsection7__heading {
     margin-bottom: 52px;
   }
+  .dsection8__container {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .dsection8__col {
+    width: 100%;
+  }
+  .dsection8__col:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .dsection8__col > img {
+    aspect-ratio: 80/44;
+  }
   .checks {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px 24px;
@@ -2010,6 +2044,12 @@ input[type=number]::-webkit-inner-spin-button {
     width: 110px;
   }
   .dsection6__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .dsection8__col > img {
+    aspect-ratio: 35/22;
+  }
+  .dsection8__infocards {
     grid-template-columns: repeat(1, 1fr);
   }
   .infocard {
