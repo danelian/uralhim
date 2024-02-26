@@ -10,8 +10,6 @@
         margin-bottom: 56px;
       }
       .section-title {
-        word-wrap: break-word;
-        // word-break: break-all;
         &:not(:last-child) {
           margin-bottom: 32px;
         }
@@ -83,7 +81,6 @@
   &__left {
     .section-title {
       max-width: 524px;
-      word-wrap: break-word;
     }
     p {
       max-width: 480px;
@@ -124,6 +121,12 @@
   }
 }
 
+.dsection7 {
+  &__heading {
+    margin-bottom: 80px;
+  }
+}
+
 .infocard {
   padding: 28px 16px 28px 28px;
   border-radius: 16px;
@@ -156,6 +159,33 @@
         margin-bottom: 8px;
       }
     }
+  }
+}
+
+.checks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px 40px;
+  width: 100%;
+}
+.check {
+  position: relative;
+  padding-left: 42px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/check.svg');
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.32;
   }
 }
 
@@ -221,6 +251,20 @@
     &__cards {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+    }
+  }
+  .dsection7 {
+    &__heading {
+      margin-bottom: 52px;
+    }
+  }
+  .checks {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 24px;
+  }
+  .check {
+    p {
+      font-size: 16px;
     }
   }
 }
@@ -303,5 +347,9 @@
         }
       }
     }
+  }
+  .checks {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 24px;
   }
 }
