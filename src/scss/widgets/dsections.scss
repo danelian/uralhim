@@ -1,4 +1,4 @@
-.default-section2 {
+.dsection2 {
   padding-top: 64px;
   &__container {
     display: flex;
@@ -35,7 +35,7 @@
   }
 }
 
-.default-section3 {
+.dsection3 {
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -44,7 +44,7 @@
   }
 }
 
-.default-section4 {
+.dsection4 {
   padding-top: 64px;
   .default-title {
     margin-bottom: 56px;
@@ -69,7 +69,7 @@
   }
 }
 
-.default-section5 {
+.dsection5 {
   &__container {
     display: flex;
     align-items: flex-start;
@@ -109,8 +109,58 @@
   }
 }
 
+.dsection6 {
+  &__heading {
+    margin-bottom: 80px;
+    .section-title {
+      max-width: 650px;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+.infocard {
+  padding: 28px 16px 28px 28px;
+  border-radius: 16px;
+  color: var(--white-color);
+  background-color: var(--global-color);
+  &.dark {
+    background-color: var(--darkBlue-color);
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  ul {
+    padding-left: 28px;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
 @include tablet {
-  .default-section2 {
+  .dsection2 {
     padding-top: 44px;
     &__container {
       &-left {
@@ -121,12 +171,12 @@
       }
     }
   }
-  .default-section3 {
+  .dsection3 {
     &__cards {
       gap: 64px 20px;
     }
   }
-  .default-section4 {
+  .dsection4 {
     padding-top: 44px;
     &__cards {
       display: flex;
@@ -158,16 +208,25 @@
       }
     }
   }
-  .default-section5 {
+  .dsection5 {
     &__infocard {
       padding: 32px 20px;
       font-size: 16px;
     }
   }
+  .dsection6 {
+    &__heading {
+      margin-bottom: 52px;
+    }
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 765px) {
-  .default-section2 {
+  .dsection2 {
     padding-top: 44px;
     &__container {
       flex-direction: column;
@@ -194,7 +253,7 @@
       }
     }
   }
-  .default-section5 {
+  .dsection5 {
     &__container {
       justify-content: flex-start;
       flex-direction: column;
@@ -210,18 +269,38 @@
 }
 
 @include mobile {
-  .default-section3 {
+  .dsection3 {
     &__cards {
       grid-template-columns: repeat(1, 1fr);
     }
   }
-  .default-section4 {
+  .dsection4 {
     padding-top: 44px;
     &__cards {
       padding-bottom: 32px;
       .scard,
       .pcard {
         width: 110px;
+      }
+    }
+  }
+  .dsection6 {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .infocard {
+    padding: 24px;
+    h3 {
+      margin-bottom: 16px;
+      font-size: 17px;
+    }
+    ul {
+      padding-left: 24px;
+      li {
+        &:not(:last-child) {
+          margin-bottom: 6px;
+        }
       }
     }
   }

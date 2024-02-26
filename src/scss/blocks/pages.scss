@@ -1,5 +1,5 @@
 .page-template-about {
-  .default-section2 {
+  .dsection2 {
     .section-title {
       font-size: 35px;
     }
@@ -12,31 +12,31 @@
   }
 }
 .single-uslugi {
-  .default-section4 {
+  .dsection4 {
     margin-bottom: 100px;
   }
 }
 .products {
-  .default-section3 {
+  .dsection3 {
     padding-top: 64px;
   }
 }
 
 @include tablet {
   .page-template-about {
-    .default-section2 {
+    .dsection2 {
       .section-title {
         font-size: 28px;
       }
     }
   }
   .single-uslugi {
-    .default-section4 {
+    .dsection4 {
       margin-bottom: 72px;
     }
   }
   .products {
-    .default-section3 {
+    .dsection3 {
       padding-top: 44px;
     }
   }
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 765px) {
   .page-template-about {
-    .default-section2 {
+    .dsection2 {
       .section-title {
         font-size: 24px;
         span {
@@ -60,14 +60,14 @@
 
 @include mobile {
   .home {
-    .default-section3__cards {
+    .dsection3__cards {
       .pcard:nth-child(n+4) {
         display: none;
       }
     }
   }
   .single-uslugi {
-    .default-section4 {
+    .dsection4 {
       margin-bottom: 56px;
     }
   }
