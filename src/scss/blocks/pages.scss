@@ -21,6 +21,11 @@
     padding-top: 64px;
   }
 }
+.single-services {
+  .dsection5__infocard {
+    padding: 40px 24px;
+  }
+}
 
 @include tablet {
   .page-template-about {
@@ -30,9 +35,22 @@
       }
     }
   }
-  .single-uslugi {
+  .single-services {
     .dsection4 {
       margin-bottom: 72px;
+    }
+    .dsection5 {
+      &__container {
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+      &__left {
+        width: 100%;
+        margin-bottom: 52px;
+      }
+      &__right {
+        width: 100%;
+      }
     }
   }
   .products {
